@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&family=Roboto:ital,wght@0,400;0,700;1,300;1,400;1,500&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+body{
+    background-color:#fff ;
+    overflow: hidden;
+}
+/* CABEÇALHO */
+header{
+    position: relative;
+    }
+header img, header span{
+    margin: 10px;
+    position: absolute;
+    z-index: 1;
+}
+header span{
+right: 10px;
+top: 2px;
+font-family: 'Reem Kufi', sans-serif;
+}
+header img{
+    left: 5px;
+    width: 70px;
+}
+/* PRINCIPAL */
+.container{
+    height: calc(100vh - 12px);
+    background-color: #35CCED;
+    margin: 0.2rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+/* LADO ESQUERDO */
+.container-left{
+    background: transparent;
+    font-family: 'Reem Kufi', sans-serif;
+    color: #fff;
+    width: 45%;
+    position: relative;
+}
+.container-left h1{
+    font-size: 22pt;
+}
+/* IMAGEM */
+.container-left img{
+position: absolute;
+max-width: 60%;
+right: -20%;
+height: 35vh;
+bottom: 0;
+}
+/* LADO ESQUERDO E DIREITO */
+.container-left, .container-rigth{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ /* LADO DIREITO */
+.container-rigth{
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    width: 55%;
+    border-radius: 20px 10px 10px 20px;
+}
+/* FORM */
+.container-rigth, .form {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+}
+/* SOCIAL MEDIAS */
+.login-with-social{
+    padding-top: 2rem;
+    display: flex;
+   gap: 15px;
+}
+.login-with-social a{
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    font-size: 1rem;
+    margin-bottom: 4rem;
+    border: 1px solid  #35a9ed;
+    text-decoration: none;
+   color: #C1C1C1;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    transition: all 0.6s;
+}
+.or{
+    font-weight: 600;
+    font-size: 10pt;
+    color: #C1C1C1;
+}
+.login-with-social a:hover{
+    color: #fff;
+    background-color: #35a9ed;
+}
+.login-with-social a img{
+    margin-right: 5px;
+}
+/* FORM */
+.form{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.form input{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin: 5px;
+    padding: 8px;
+    width: 100%;
+text-align: start;
+}
+.form .underline::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    background-color: #C1C1C1;
+}
+.form .underline::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    background-color: #35a9ed;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+.form input:focus + .underline::after{
+    transform: scaleX(1);
+}
+.form button{
+    width: 100%;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #35CCED;
+    font-weight: 600;
+    font-size: 12pt;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: all 0.6s;
+}
+.form button:hover{
+    color:#35CCED;
+    background-color: #fff;
+}
+.cadrastar{
+    font-size: 11pt;
+}
+/* RESPONSIVO */
+@media (max-width: 670px){
+    body{
+        overflow: auto;
+        background: linear-gradient(to bottom, #32a2e4, #35cced);
+    }
+    header{
+        height: 10vh;
+        background-color: transparent;
+        margin-bottom: 2rem;
+    }
+header img{width: 40px;}
+.or{margin-top: 20px;}
+.form{padding: 0;}
+.container{
+display: flex;
+flex-direction: column;
+margin: 0;
+border-radius: 0;
+height: 90vh;
+background-color: transparent;
+}
+.container-left, .container-rigth{
+    width: 100%;
+}
+.container-left{
+    height: auto;
+ border-radius:0 0 80px 80px;
+ background:transparent;
+}
+.container-left img{
+position: relative;
+right: 0;
+bottom: 0;
+}
+.container-rigth{
+    border-radius: 20px 20px 0 0;
+    font-size: 1.5rem;
+    height: auto;
+    text-align: center;
+}
+.form .underline::after,.form .underline::before{
+    left: -4px
+}
+@media (max-width: 370px){
+    .login-with-social{
+        display: flex;
+        flex-direction: column;
+    }
+   .login-with-social a{margin-bottom: 4px;}
+}
+}
